@@ -1,33 +1,242 @@
-import {authtypes} from '../aciontypes';
-import { setAuth } from "../../utils/index";
-import axios from 'axios';
+import {authtypes,dataTypes} from '../aciontypes'
 
-// const authaction = {
-//     login: ()=>({type: authtypes.login}),
-//     logout:()=>({type: authtypes.logout})
-// };
-
-// export default authaction;
-
-export const login = (values,route ) => async (dispatch)=>{
-
-    return await axios({
-      method: 'post',
-      url: `http://localhost:4000/user/${route}`,
-      data: values
-    }) 
-      .then((resp) => {
-        console.log("response", resp.data.token)
-        console.log("response", resp.data);
-        if (!!resp.data.token) {
-          setAuth(resp.data.token);
-          dispatch({type:authtypes.LOG_IN , payload : resp.data.user})
-          localStorage.setItem('isAuth' , true)
-        }
-      })
-      .catch((err) => {
-        console.log("error", err.data);
-      });
+export const authaction = {
+    login: ()=>({type: authtypes.loginBuyer}),
+    logout:()=>({type: authtypes.logoutBuyer})
 };
 
-export const logout = ()=> ({type:authtypes.LOG_OUT});
+export const listProduct = (payload) => ({ type: dataTypes.product, payload });
+export const listCart = (payload) => ({ type: dataTypes.cart, payload });
+
+
+
+
+export const getProduct = (category,id) => (dispatch) => {
+    return fetch(`http://localhost:4000/user/${category}`)
+    .then(res=>res.json())
+    .then(res=>{
+        dispatch({ type: dataTypes.product, payload: res });
+    });
+}
+
+export const getCart = (userId) => (dispatch) => {
+    return fetch(`http://localhost:4000/user/cart/${userId}`)
+    .then(res=>res.json())
+    .then(res=>{
+        dispatch({ type: dataTypes.product, payload: res });
+    });
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

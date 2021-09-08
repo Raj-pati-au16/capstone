@@ -1,16 +1,10 @@
 export const authtypes = {
-    LOG_IN:'LOG_IN',
-    LOG_OUT:'LOG_OUT'
-};
-
-export const productTypes = {
-    FETCH_PRODUCTS:"FETCH_PRODUCTS",
-    SET_PRODUCTS:"SET_PRODUCTS",
-    SELECTED_PRODUCT:"SELECTED_PRODUCT",
-    REMOVE_SELECTED_PRODUCT:"REMOVE_SELECTED_PRODUCT",
-    FETCH_CATEGORY_PRODUCTS : "FETCH_CATEGORY_PRODUCTS"
-};
-
-export const cartTypes ={
-    GET_CART:'GET_CART'
+    loginBuyer:'LOGIN',
+    logoutBuyer:'LOGOUT'
 }
+
+export const dataTypes ={
+    product:'ADD_DATA',
+    cart:'CART_DATA'
+}
+

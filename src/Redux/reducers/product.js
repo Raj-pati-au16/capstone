@@ -2,11 +2,11 @@ import { dataTypes } from "../aciontypes";
 
 const initialState = [];
 
-const carts = (state, action) => {
+const products = (state, action) => {
     state = state || initialState;
 
     switch (action.type) {
-    case dataTypes.cart:
+    case dataTypes.product:
         return action.payload;
 
     default:
@@ -14,4 +14,4 @@ const carts = (state, action) => {
     }
 }
 
-export default carts;
+export default products;
