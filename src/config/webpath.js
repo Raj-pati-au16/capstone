@@ -3,14 +3,16 @@ const PATHS = {
     PROFILE:'/profile',
     SIGNUP:'/signup',
     LOGIN :'/login',
-    ORDERS:'/orders',
-    PRODUCTS:'/products/:category',
-    SHOME :'/seller/home',
-    SPROFILE:'/seller/profile',
-    SSIGNUP:'/seller/signup',
-    SLOGIN:'/seller/login',
-    SORDERS:'/seller/orders',
-    SPRODUCTS:'/seller/products/:category '
+    ADDRESS:'/address',
+    ALLPRODUCT:'/allProducts',
+    PRODUCTBYID:'/product/:id',
+    ELECTRONIC:'/Electronic',
+    HOMEESSENTIALS:'/HomeEssentials',
+    GROCERY:'/Grocery',
+    CART:'/cart/:id',
+    CHECKOUT:'/checkout/address',
+    CHECKOUTSUCCESS:'/checkout/success'
+
 
 }
 
